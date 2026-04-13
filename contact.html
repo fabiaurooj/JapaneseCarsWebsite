@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - ATIF TRADING LTD</title>
+    <link rel="stylesheet" href="css/styles.css?v=20260412-1">
+    <script src="js/currency.js" defer></script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-left">
+                <button class="menu-toggle" id="menuToggle" aria-label="Open menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <a href="index.html" class="navbar-brand">
+                    <img src="images/logo.jpeg" alt="ATIF TRADING LTD logo" class="logo">
+                    <h1>ATIF TRADING LTD</h1>
+                </a>
+            </div>
+            <div class="nav-right">
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="listings.html">Browse Cars</a></li>
+                    <li><a href="contact.html" class="active">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <div class="side-drawer" id="sideDrawer">
+        <div class="drawer-header">
+            <h3>Quick Settings</h3>
+            <button class="drawer-close" id="drawerClose" aria-label="Close menu">&times;</button>
+        </div>
+        <div class="drawer-controls">
+            <label for="languageSelect">Language</label>
+            <select id="languageSelect" class="language-select">
+                <option value="en">🇺🇸 English</option>
+                <option value="ja">🇯🇵 日本語</option>
+            </select>
+
+            <label for="currency-switcher">Currency</label>
+            <select id="currency-switcher" class="custom-select"></select>
+        </div>
+    </div>
+    <div class="drawer-backdrop" id="drawerBackdrop"></div>
+    <!-- Page Title -->
+    <section class="page-title">
+        <div class="container">
+            <h1>Place your order and get your car!</h1>
+            <p class="subtitle">Japanese cars importer</p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+        <div class="container">
+            <div class="contact-container">
+                <!-- Contact Form -->
+                <div class="contact-form-wrapper">
+                    <h2>Get in Touch</h2>
+                    <form class="contact-form" id="contactForm">
+                        <input type="hidden" name="redirect" value="thank-you.html">
+                        <div class="form-group">
+                            <label for="name">Your Name *</label>
+                            <input type="text" id="name" name="name" placeholder="e.g., Atif Saad" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" name="email" placeholder="e.g., atcoltd53@gmail.com" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone">Phone Number *</label>
+                            <input type="tel" id="phone" name="phone" placeholder="e.g., +81-70-8982-5090" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="carInterest">Interested In (Car Model)</label>
+                            <input type="text" id="carInterest" name="carInterest" placeholder="e.g., Toyota Corolla">
+                        </div>
+
+                        <input type="hidden" id="preferredFeaturesValue" name="preferredFeaturesValue">
+                        <input type="hidden" id="carImage" name="carImage">
+                        <div class="form-group" id="preferencesSummaryGroup" style="display: none;">
+                            <label for="preferencesSummary">Selected Preferences</label>
+                            <input type="text" id="preferencesSummary" readonly>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Message *</label>
+                            <textarea id="message" name="message" rows="6" required></textarea>
+                        </div>
+
+                        <!-- Honeypot field to prevent spam -->
+                        <div class="form-group" style="display: none;">
+                            <label for="website">Website (leave blank)</label>
+                            <input type="text" id="website" name="website" autocomplete="off">
+                        </div>
+
+                        <button 
+                            type="submit" 
+                            class="btn btn-primary" >
+                            Send Message
+                        </button>
+                    </form>
+                    <div id="formMessage" class="form-message" style="display: none;"></div>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="contact-info">
+                    <h2>Contact Information</h2>
+                    
+                    <div class="info-item">
+                        <h3>📍 Address</h3>
+                        <p>〒503-0116 Gifu-shi Anpachi-gun Anpachi-cho Omori 472-2, Room No. 203<br>Japan</p>
+                    </div>
+
+                    <div class="info-item">
+                        <h3>📞 Phone</h3>
+                        <p><a href="tel:+817089825090">+81-70-8982-5090</a><br><a href="tel:+818055158310">+81-80-5515-8310</a> (WhatsApp)</p>
+                    </div>
+
+                    <div class="info-item">
+                        <h3>✉️ Email</h3>
+                        <p><a href="mailto:atcoltd53@gmail.com">atcoltd53@gmail.com</a></p>
+                    </div>
+
+                    <div class="info-item">
+                        <h3>⏰ Business Hours</h3>
+                        <p>24/7 Availability (Support + Inquiries)<br>Office: Monday - Friday: 9:00 AM - 6:00 PM<br>Saturday: 10:00 AM - 4:00 PM<br>Sunday: Closed</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 ATIF TRADING LTD. All rights reserved.</p>
+            <p>Contact: <a href="mailto:atcoltd53@gmail.com">atcoltd53@gmail.com</a> | Phone: <a href="tel:+817089825090">+81-70-8982-5090</a></p>
+            <p>Social: <a href="https://www.instagram.com/atcoltd53/" target="_blank" rel="noopener noreferrer">Instagram</a> | <a href="https://x.com/atcoltd53" target="_blank" rel="noopener noreferrer">X (Twitter)</a> | <a href="https://line.me/ti/p/CQ_AwBvXuz" target="_blank" rel="noopener noreferrer">LINE</a></p>
+        </div>
+    </footer>
+
+    <script src="js/api.js?v=20260412-1"></script>
+    <script src="js/script.js?v=20260412-1"></script>
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', async function(e) {
+            e.preventDefault();
+
+            const msgElement = document.getElementById('formMessage');
+
+            if (msgElement) {
+                msgElement.style.display = 'none';
+                msgElement.textContent = '';
+            }
+
+            // Honeypot Check (The 'website' field from your code)
+            if (document.getElementById('website').value !== "") {
+                return; // Bot detected, stop here
+            }
+
+            const formData = new FormData();
+            formData.append('access_key', '9f19c295-438e-44e0-bae0-fb2ec4d5a1bf');
+            formData.append('name', document.getElementById('name').value);
+            formData.append('email', document.getElementById('email').value);
+            formData.append('phone', document.getElementById('phone').value);
+            formData.append('carInterest', document.getElementById('carInterest').value);
+            formData.append('message', document.getElementById('message').value);
+
+            const selectedPrefs = (document.getElementById('preferredFeaturesValue')?.value || '').trim();
+            if (selectedPrefs) formData.append('preferredFeatures', selectedPrefs);
+
+            const selectedCarImage = (document.getElementById('carImage')?.value || '').trim();
+            if (selectedCarImage) {
+                formData.append('carImage', selectedCarImage);
+            }
+
+            try {
+                const response = await fetch('https://api.web3forms.com/submit', {
+                    method: 'POST',
+                    body: formData
+                });
+
+                const result = await response.json();
+
+                if (result.success) {
+                    window.location.href = 'thank-you.html';
+                } else {
+                    msgElement.textContent = "Submission failed. Please try again.";
+                    msgElement.style.color = '#dc3545';
+                    msgElement.style.display = 'block';
+                }
+            } catch (error) {
+                msgElement.textContent = 'Error: ' + error.message;
+                msgElement.style.color = '#dc3545';
+                msgElement.style.display = 'block';
+            }
+        });
+    </script>
+</body>
+</html>

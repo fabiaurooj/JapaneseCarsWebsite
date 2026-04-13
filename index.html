@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ATIF TRADING LTD - Used Japanese Cars</title>
+    <link rel="stylesheet" href="css/styles.css?v=20260412-1">
+    <script src="js/currency.js" defer></script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-left">
+                <button class="menu-toggle" id="menuToggle" aria-label="Open menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <a href="index.html" class="navbar-brand">
+                    <img src="images/logo.jpeg" alt="ATIF TRADING LTD logo" class="logo">
+                    <h1>ATIF TRADING LTD</h1>
+                </a>
+            </div>
+            <div class="nav-right">
+                <ul class="nav-links">
+                    <li><a href="index.html" class="active" data-en="Home" data-ja="ホーム">Home</a></li>
+                    <li><a href="listings.html" data-en="Browse Cars" data-ja="車を見る">Browse Cars</a></li>
+                    <li><a href="contact.html" data-en="Contact" data-ja="連絡">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="side-drawer" id="sideDrawer">
+        <div class="drawer-header">
+            <h3>Quick Settings</h3>
+            <button class="drawer-close" id="drawerClose" aria-label="Close menu">&times;</button>
+        </div>
+        <div class="drawer-controls">
+            <label for="languageSelect">Language</label>
+            <select id="languageSelect" class="language-select">
+                <option value="en">🇺🇸 English</option>
+                <option value="ja">🇯🇵 日本語</option>
+            </select>
+
+            <label for="currency-switcher">Currency</label>
+            <select id="currency-switcher" class="custom-select"></select>
+        </div>
+    </div>
+    <div class="drawer-backdrop" id="drawerBackdrop"></div>
+
+    <!-- Hero Section -->
+    <section class="hero hero-homepage">
+        <div class="container hero-shell">
+            <div class="hero-content">
+                <h2 data-en="Find Your Perfect Japanese Car" data-ja="完璧な日本の車を見つける">Find Your Perfect Japanese Car</h2>
+                <p data-en="Trusted source for quality Japanese and imported used cars." data-ja="高品質な日本車・輸入中古車の信頼できる販売店です。">Trusted source for quality Japanese and imported used cars.</p>
+                <div class="hero-search" id="heroSearch">
+                    <input type="text" id="heroSearchInput" class="hero-search-input" placeholder="Search by brand, model, year, colour…" autocomplete="off" aria-label="Search cars">
+                    <button class="hero-search-btn" id="heroSearchBtn" aria-label="Search">&#128269; Search</button>
+                    <div class="hero-search-suggestions" id="heroSearchSuggestions"></div>
+                </div>
+                <div class="hero-actions">
+                    <a href="listings.html" class="btn btn-primary" data-en="Browse All Cars" data-ja="すべての車を見る">Browse All Cars</a>
+                    <a href="contact.html" class="btn btn-secondary">Request a Car</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Cars Section -->
+    <section class="featured-section">
+        <div class="container">
+            <div class="section-intro">
+                <h2>Featured Cars</h2>
+            </div>
+            <div class="cars-grid" id="featuredCars">
+                <!-- Featured cars will be loaded here by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Brands Section -->
+    <section class="brands-section">
+        <div class="container">
+            <div class="section-intro section-intro-left brands-section-header">
+                <div>
+                    <h2>Popular Japanese Brands</h2>
+                </div>
+            </div>
+            <div class="brands-grid">
+                <div class="brand-card">
+                    <img class="brand-logo" src="https://cdn.simpleicons.org/toyota/d4af37" alt="Toyota logo" loading="lazy" onerror="this.onerror=null;this.src='images/brands/badge-toyota.svg';">
+                    <h3>Toyota</h3>
+                    <p>Reliable & Fuel Efficient</p>
+                </div>
+                <div class="brand-card">
+                    <img class="brand-logo" src="https://cdn.simpleicons.org/nissan/d4af37" alt="Nissan logo" loading="lazy" onerror="this.onerror=null;this.src='images/brands/badge-nissan.svg';">
+                    <h3>Nissan</h3>
+                    <p>Innovation & Comfort</p>
+                </div>
+                <div class="brand-card">
+                    <img class="brand-logo" src="https://cdn.simpleicons.org/honda/d4af37" alt="Honda logo" loading="lazy" onerror="this.onerror=null;this.src='images/brands/badge-honda.svg';">
+                    <h3>Honda</h3>
+                    <p>Performance & Quality</p>
+                </div>
+                <div class="brand-card">
+                    <img class="brand-logo" src="https://cdn.simpleicons.org/mazda/d4af37" alt="Mazda logo" loading="lazy" onerror="this.onerror=null;this.src='images/brands/badge-mazda.svg';">
+                    <h3>Mazda</h3>
+                    <p>Sleek & Stylish</p>
+                </div>
+                <div class="brand-card">
+                    <img class="brand-logo" src="https://cdn.simpleicons.org/ford/d4af37" alt="Ford Japan logo" loading="lazy" onerror="this.onerror=null;this.src='images/brands/badge-ford-japan.svg';">
+                    <h3>Ford Japan</h3>
+                    <p>American Quality in Japan</p>
+                </div>
+                <div class="brand-card">
+                    <img class="brand-logo" src="https://cdn.simpleicons.org/mitsubishi/d4af37" alt="Mitsubishi logo" loading="lazy" onerror="this.onerror=null;this.src='images/brands/badge-mitsubishi.svg';">
+                    <h3>Mitsubishi</h3>
+                    <p>Durable & Affordable</p>
+                </div>
+                <div class="brand-card">
+                    <img class="brand-logo" src="https://cdn.simpleicons.org/subaru/d4af37" alt="Subaru logo" loading="lazy" onerror="this.onerror=null;this.src='images/brands/badge-subaru.svg';">
+                    <h3>Subaru</h3>
+                    <p>All-Wheel Drive Expert</p>
+                </div>
+                <div class="brand-card">
+                    <img class="brand-logo" src="https://cdn.simpleicons.org/suzuki/d4af37" alt="Suzuki logo" loading="lazy" onerror="this.onerror=null;this.src='images/brands/badge-suzuki.svg';">
+                    <h3>Suzuki</h3>
+                    <p>Versatile & Compact</p>
+                </div>
+                <div class="brand-card">
+                    <img class="brand-logo brand-logo-local" src="images/brands/ISUZU.jpeg" alt="Isuzu logo" loading="lazy" onerror="this.onerror=null;this.src='images/brands/Isuzu.jpg';">
+                    <h3>Isuzu</h3>
+                    <p>Robust & Commercial</p>
+                </div>
+                <div class="brand-card">
+                    <img class="brand-logo brand-logo-local" src="images/brands/Lexus.jpeg" alt="Lexus logo" loading="lazy" onerror="this.onerror=null;this.src='images/brands/Lexus.jpg';">
+                    <h3>Lexus</h3>
+                    <p>Luxury & Performance</p>
+                </div>
+                <div class="brand-card">
+                    <img class="brand-logo brand-logo-local" src="images/brands/Daihatsu.jpeg" alt="Daihatsu logo" loading="lazy" onerror="this.onerror=null;this.src='images/brands/Daihatsu.png';">
+                    <h3>Daihatsu</h3>
+                    <p>Compact & Efficient</p>
+                </div>
+                <div class="brand-card">
+                    <img class="brand-logo brand-logo-local" src="images/brands/Hino.jpeg" alt="Hino logo" loading="lazy" onerror="this.onerror=null;this.src='images/brands/Hino.png';">
+                    <h3>Hino</h3>
+                    <p>Heavy Duty & Reliable</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Imported Brands Section -->
+    <section class="brands-section">
+        <div class="container">
+            <div class="section-intro section-intro-left">
+                <h2>Imported Brands</h2>
+            </div>
+            <div class="brands-grid">
+                <div class="brand-card">
+                    <img class="brand-logo brand-logo-local" src="images/brands/Mercedes.jpeg" alt="Mercedes logo" loading="lazy" onerror="this.onerror=null;this.src='images/brands/Mercedes.jpg';">
+                    <h3>Mercedes</h3>
+                    <p>Luxury & Engineering</p>
+                </div>
+                <div class="brand-card">
+                    <img class="brand-logo" src="https://cdn.simpleicons.org/bmw/d4af37" alt="BMW logo" loading="lazy" onerror="this.onerror=null;this.src='images/brands/badge-bmw.svg';">
+                    <h3>BMW</h3>
+                    <p>Ultimate Driving Machine</p>
+                </div>
+                <div class="brand-card">
+                    <img class="brand-logo" src="https://cdn.simpleicons.org/volkswagen/d4af37" alt="Volkswagen logo" loading="lazy" onerror="this.onerror=null;this.src='images/brands/badge-volkswagen.svg';">
+                    <h3>Volkswagen</h3>
+                    <p>Reliable & Practical</p>
+                </div>
+                <div class="brand-card">
+                    <img class="brand-logo" src="https://cdn.simpleicons.org/chevrolet/d4af37" alt="Chevrolet logo" loading="lazy" onerror="this.onerror=null;this.src='images/brands/badge-chevrolet.svg';">
+                    <h3>Chevrolet</h3>
+                    <p>American Muscle</p>
+                </div>
+                <div class="brand-card">
+                    <img class="brand-logo" src="https://cdn.simpleicons.org/audi/d4af37" alt="Audi logo" loading="lazy" onerror="this.onerror=null;this.src='images/brands/badge-audi.svg';">
+                    <h3>Audi</h3>
+                    <p>German Precision</p>
+                </div>
+                <div class="brand-card">
+                    <img class="brand-logo" src="https://cdn.simpleicons.org/volvo/d4af37" alt="Volvo logo" loading="lazy" onerror="this.onerror=null;this.src='images/brands/badge-volvo.svg';">
+                    <h3>Volvo</h3>
+                    <p>Safety & Comfort</p>
+                </div>
+                <div class="brand-card">
+                    <img class="brand-logo" src="https://cdn.simpleicons.org/peugeot/d4af37" alt="Peugeot logo" loading="lazy" onerror="this.onerror=null;this.src='images/brands/badge-peugeot.svg';">
+                    <h3>Peugeot</h3>
+                    <p>French Elegance</p>
+                </div>
+                <div class="brand-card">
+                    <img class="brand-logo" src="https://cdn.simpleicons.org/chrysler/d4af37" alt="Chrysler logo" loading="lazy" onerror="this.onerror=null;this.src='images/brands/badge-chrysler.svg';">
+                    <h3>Chrysler</h3>
+                    <p>Bold & Innovative</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section class="why-us">
+        <div class="container">
+            <div class="section-intro">
+                <h2>Why Choose ATIF TRADING LTD?</h2>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <h3>✓ Quality Assured</h3>
+                    <p>All vehicles are inspected and certified</p>
+                </div>
+                <div class="feature-card">
+                    <h3>✓ Competitive Prices</h3>
+                    <p>Best deals on used Japanese cars</p>
+                </div>
+                <div class="feature-card">
+                    <h3>✓ Warranty</h3>
+                    <p>6-month warranty on all vehicles</p>
+                </div>
+                <div class="feature-card">
+                    <h3>✓ Expert Support</h3>
+                    <p>Expert team to help with your purchase</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 ATIF TRADING LTD. All rights reserved.</p>
+            <p>Contact: <a href="mailto:atcoltd53@gmail.com">atcoltd53@gmail.com</a> | Phone: <a href="tel:+817089825090">+81-70-8982-5090</a></p>
+            <p>Social: <a href="https://www.instagram.com/atcoltd53/" target="_blank" rel="noopener noreferrer">Instagram</a> | <a href="https://x.com/atcoltd53" target="_blank" rel="noopener noreferrer">X (Twitter)</a> | <a href="https://line.me/ti/p/CQ_AwBvXuz" target="_blank" rel="noopener noreferrer">LINE</a></p>
+        </div>
+    </footer>
+
+    <script src="js/api.js?v=20260412-1"></script>
+    <script src="js/script.js?v=20260412-1"></script>
+</body>
+</html>

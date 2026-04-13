@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Start Your Enquiry - ATIF TRADING LTD</title>
+    <link rel="stylesheet" href="css/styles.css?v=20260412-1">
+    <script src="js/currency.js" defer></script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-left">
+                <button class="menu-toggle" id="menuToggle" aria-label="Open menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <a href="index.html" class="navbar-brand">
+                    <img src="images/logo.jpeg" alt="ATIF TRADING LTD logo" class="logo">
+                    <h1>ATIF TRADING LTD</h1>
+                </a>
+            </div>
+            <div class="nav-right">
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="listings.html">Browse Cars</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="side-drawer" id="sideDrawer">
+        <div class="drawer-header">
+            <h3>Quick Settings</h3>
+            <button class="drawer-close" id="drawerClose" aria-label="Close menu">&times;</button>
+        </div>
+        <div class="drawer-controls">
+            <label for="languageSelect">Language</label>
+            <select id="languageSelect" class="language-select">
+                <option value="en">🇺🇸 English</option>
+                <option value="ja">🇯🇵 日本語</option>
+            </select>
+
+            <label for="currency-switcher">Currency</label>
+            <select id="currency-switcher" class="custom-select"></select>
+        </div>
+    </div>
+    <div class="drawer-backdrop" id="drawerBackdrop"></div>
+
+    <section class="enquiry-welcome-section" id="enquiryLandingPage">
+        <div class="container">
+            <div class="enquiry-welcome-card">
+                <p class="enquiry-kicker">You are one step away</p>
+                <h1>Great choice. Let us help you secure this car.</h1>
+                <p class="enquiry-car" id="enquiryCarName">Preparing your selected vehicle details...</p>
+                <div class="enquiry-car-preview" id="enquiryCarPreview" hidden>
+                    <img id="enquiryCarImage" alt="Selected car image" loading="lazy">
+                </div>
+                <p class="enquiry-copy">Select your preferences and continue when you are ready.</p>
+
+                <div class="enquiry-preferences" id="enquiryPreferences">
+                    <h3>Tell us your preferences</h3>
+                    <p>Choose any options below (all optional).</p>
+                    <div class="enquiry-pref-grid">
+                        <div class="enquiry-pref-item">
+                            <label for="prefBudget">Budget Range</label>
+                            <select id="prefBudget">
+                                <option value="">No preference</option>
+                                <option value="under_10k">Under $10,000</option>
+                                <option value="10k_20k">$10,000 - $20,000</option>
+                                <option value="20k_30k">$20,000 - $30,000</option>
+                                <option value="30k_plus">$30,000+</option>
+                            </select>
+                        </div>
+                        <div class="enquiry-pref-item">
+                            <label for="prefBodyType">Body Type</label>
+                            <select id="prefBodyType">
+                                <option value="">No preference</option>
+                                <option value="Sedan">Sedan</option>
+                                <option value="Hatchback">Hatchback</option>
+                                <option value="SUV">SUV</option>
+                                <option value="Van / MPV">Van / MPV</option>
+                                <option value="Coupe">Coupe</option>
+                            </select>
+                        </div>
+                        <div class="enquiry-pref-item">
+                            <label for="prefFuel">Fuel Type</label>
+                            <select id="prefFuel">
+                                <option value="">No preference</option>
+                                <option value="Petrol">Petrol</option>
+                                <option value="Diesel">Diesel</option>
+                                <option value="Hybrid">Hybrid</option>
+                                <option value="Electric">Electric</option>
+                            </select>
+                        </div>
+                        <div class="enquiry-pref-item">
+                            <label for="prefTransmission">Transmission</label>
+                            <select id="prefTransmission">
+                                <option value="">No preference</option>
+                                <option value="Automatic">Automatic</option>
+                                <option value="Manual">Manual</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="enquiry-pref-features">
+                        <label class="pref-feature"><input type="checkbox" name="enqFeature" value="Low Mileage"> Low Mileage</label>
+                        <label class="pref-feature"><input type="checkbox" name="enqFeature" value="Sunroof"> Sunroof</label>
+                        <label class="pref-feature"><input type="checkbox" name="enqFeature" value="360 Camera"> 360 Camera</label>
+                        <label class="pref-feature"><input type="checkbox" name="enqFeature" value="Navigation"> Navigation</label>
+                        <label class="pref-feature"><input type="checkbox" name="enqFeature" value="Leather Seats"> Leather Seats</label>
+                        <label class="pref-feature"><input type="checkbox" name="enqFeature" value="7 Seater"> 7 Seater</label>
+                        <label class="pref-feature"><input type="checkbox" name="enqFeature" value="All Wheel Drive"> All Wheel Drive</label>
+                        <label class="pref-feature"><input type="checkbox" name="enqFeature" value="Apple CarPlay / Android Auto"> Apple CarPlay / Android Auto</label>
+                    </div>
+                </div>
+
+                <div class="enquiry-actions">
+                    <a id="continueToContactBtn" class="btn btn-primary" href="contact.html">Continue to Contact Us</a>
+                    <a id="backToCarBtn" class="btn btn-secondary" href="listings.html">Back to Car Details</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 ATIF TRADING LTD. All rights reserved.</p>
+            <p>Contact: <a href="mailto:atcoltd53@gmail.com">atcoltd53@gmail.com</a> | Phone: <a href="tel:+817089825090">+81-70-8982-5090</a></p>
+            <p>Social: <a href="https://www.instagram.com/atcoltd53/" target="_blank" rel="noopener noreferrer">Instagram</a> | <a href="https://x.com/atcoltd53" target="_blank" rel="noopener noreferrer">X (Twitter)</a> | <a href="https://line.me/ti/p/CQ_AwBvXuz" target="_blank" rel="noopener noreferrer">LINE</a></p>
+        </div>
+    </footer>
+
+    <script src="js/api.js?v=20260412-1"></script>
+    <script src="js/script.js?v=20260412-1"></script>
+</body>
+</html>

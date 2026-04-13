@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brand Models - ATIF TRADING LTD</title>
+    <link rel="stylesheet" href="css/styles.css?v=20260412-1">
+    <script src="js/currency.js" defer></script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-left">
+                <button class="menu-toggle" id="menuToggle" aria-label="Open menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <a href="index.html" class="navbar-brand">
+                    <img src="images/logo.jpeg" alt="ATIF TRADING LTD logo" class="logo">
+                    <h1>ATIF TRADING LTD</h1>
+                </a>
+            </div>
+            <div class="nav-right">
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="listings.html">Browse Cars</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="side-drawer" id="sideDrawer">
+        <div class="drawer-header">
+            <h3>Quick Settings</h3>
+            <button class="drawer-close" id="drawerClose" aria-label="Close menu">&times;</button>
+        </div>
+        <div class="drawer-controls">
+            <label for="languageSelect">Language</label>
+            <select id="languageSelect" class="language-select">
+                <option value="en">🇺🇸 English</option>
+                <option value="ja">🇯🇵 日本語</option>
+            </select>
+
+            <label for="currency-switcher">Currency</label>
+            <select id="currency-switcher" class="custom-select"></select>
+        </div>
+    </div>
+    <div class="drawer-backdrop" id="drawerBackdrop"></div>
+
+    <section class="page-title">
+        <div class="container">
+            <h1 id="brandModelsHeading">Brand Models</h1>
+            <p class="subtitle" id="brandModelsSubtitle">Browse model cards and open your preferred vehicle quickly.</p>
+        </div>
+    </section>
+
+    <section class="brand-models-section" id="brandModelsPage">
+        <div class="container">
+            <div class="brand-models-card">
+                <div class="brand-models-meta">
+                    <p class="subtitle" id="brandModelsHelper">Select a model card below to continue directly to enquiry.</p>
+                    <p class="brand-model-count" id="brandModelCount"></p>
+                </div>
+                <form id="brandModelSearchForm" class="model-input-row">
+                    <input type="text" id="brandModelInput" class="model-input" placeholder="Search models, for example Skyline or Serena" list="brandModelSuggestions">
+                    <datalist id="brandModelSuggestions"></datalist>
+                    <button type="submit" id="brandModelAddBtn" class="model-add-btn">Filter Cards</button>
+                </form>
+                <div class="brand-models-toolbar">
+                    <p class="brand-models-search-result" id="brandModelsSearchResult">Showing all models.</p>
+                </div>
+                <div class="brand-model-gallery" id="quickModelButtons"></div>
+                <div class="brand-model-empty" id="brandModelEmptyState" hidden>
+                    <h3>No matching models</h3>
+                    <p>Try a different model name or open all cars for this brand.</p>
+                </div>
+                <div class="brand-model-actions">
+                    <button type="button" id="brandOnlySearchBtn" class="btn btn-secondary">View All Brand Cars</button>
+                    <a href="index.html" class="btn btn-secondary">Back to Brands</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 ATIF TRADING LTD. All rights reserved.</p>
+            <p>Contact: <a href="mailto:atcoltd53@gmail.com">atcoltd53@gmail.com</a> | Phone: <a href="tel:+817089825090">+81-70-8982-5090</a></p>
+            <p>Social: <a href="https://www.instagram.com/atcoltd53/" target="_blank" rel="noopener noreferrer">Instagram</a> | <a href="https://x.com/atcoltd53" target="_blank" rel="noopener noreferrer">X (Twitter)</a> | <a href="https://line.me/ti/p/CQ_AwBvXuz" target="_blank" rel="noopener noreferrer">LINE</a></p>
+        </div>
+    </footer>
+
+    <script src="js/api.js?v=20260412-1"></script>
+    <script src="js/script.js?v=20260412-1"></script>
+</body>
+</html>

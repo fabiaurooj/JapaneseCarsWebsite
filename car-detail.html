@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Details - ATIF TRADING LTD</title>
+    <link rel="stylesheet" href="css/styles.css?v=20260412-1">
+    <script src="js/currency.js" defer></script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-left">
+                <button class="menu-toggle" id="menuToggle" aria-label="Open menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <a href="index.html" class="navbar-brand">
+                    <img src="images/logo.jpeg" alt="ATIF TRADING LTD logo" class="logo">
+                    <h1>ATIF TRADING LTD</h1>
+                </a>
+            </div>
+            <div class="nav-right">
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="listings.html">Browse Cars</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="side-drawer" id="sideDrawer">
+        <div class="drawer-header">
+            <h3>Quick Settings</h3>
+            <button class="drawer-close" id="drawerClose" aria-label="Close menu">&times;</button>
+        </div>
+        <div class="drawer-controls">
+            <label for="languageSelect">Language</label>
+            <select id="languageSelect" class="language-select">
+                <option value="en">🇺🇸 English</option>
+                <option value="ja">🇯🇵 日本語</option>
+            </select>
+
+            <label for="currency-switcher">Currency</label>
+            <select id="currency-switcher" class="custom-select"></select>
+        </div>
+    </div>
+    <div class="drawer-backdrop" id="drawerBackdrop"></div>
+
+    <!-- Car Detail Section -->
+    <section class="car-detail-section">
+        <div class="container">
+            <a href="listings.html" class="back-link">← Back to Listings</a>
+            
+            <div class="car-detail-container" id="carDetail">
+                <!-- Car details will be loaded here by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 ATIF TRADING LTD. All rights reserved.</p>
+            <p>Contact: <a href="mailto:info@atifinternational.com">info@atifinternational.com</a> | Phone: <a href="tel:+180028432277">+1-800-ATIF-CARS</a></p>
+            <p>Social: <a href="https://www.instagram.com/atcoltd53/" target="_blank" rel="noopener noreferrer">Instagram</a> | <a href="https://x.com/atcoltd53" target="_blank" rel="noopener noreferrer">X (Twitter)</a> | <a href="https://line.me/ti/p/CQ_AwBvXuz" target="_blank" rel="noopener noreferrer">LINE</a></p>
+        </div>
+    </footer>
+
+    <script src="js/api.js?v=20260412-1"></script>
+    <script src="js/script.js?v=20260412-1"></script>
+    <script>
+        window.addEventListener('DOMContentLoaded', () => {
+            const carId = new URLSearchParams(window.location.search).get('id');
+            if (carId) {
+                loadCarDetail(carId);
+            }
+        });
+    </script>
+</body>
+</html>

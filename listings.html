@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Listings - ATIF TRADING LTD</title>
+    <link rel="stylesheet" href="css/styles.css?v=20260412-1">
+    <script src="js/currency.js" defer></script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-left">
+                <button class="menu-toggle" id="menuToggle" aria-label="Open menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <a href="index.html" class="navbar-brand">
+                    <img src="images/logo.jpeg" alt="ATIF TRADING LTD logo" class="logo">
+                    <h1>ATIF TRADING LTD</h1>
+                </a>
+            </div>
+            <div class="nav-right">
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="listings.html" class="active">Browse Cars</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="side-drawer" id="sideDrawer">
+        <div class="drawer-header">
+            <h3>Quick Settings</h3>
+            <button class="drawer-close" id="drawerClose" aria-label="Close menu">&times;</button>
+        </div>
+        <div class="drawer-controls">
+            <label for="languageSelect">Language</label>
+            <select id="languageSelect" class="language-select">
+                <option value="en">🇺🇸 English</option>
+                <option value="ja">🇯🇵 日本語</option>
+            </select>
+
+            <label for="currency-switcher">Currency</label>
+            <select id="currency-switcher" class="custom-select"></select>
+        </div>
+    </div>
+    <div class="drawer-backdrop" id="drawerBackdrop"></div>
+
+    <!-- Page Title -->
+    <section class="page-title">
+        <div class="container">
+            <h1>Available Cars</h1>
+        </div>
+    </section>
+
+    <!-- Listings & Filter Section -->
+    <section class="listings-section">
+        <div class="container">
+            <div class="listings-container">
+                <!-- Sidebar Filters -->
+                <aside class="filter-sidebar">
+                    <h3>Quick Filters</h3>
+                    
+                    <div class="filter-group">
+                        <label>Brand</label>
+                        <select id="brandFilter">
+                            <option value="">All Brands</option> 
+                            <option value="Toyota">Toyota</option>
+                            <option value="Honda">Honda</option>
+                            <option value="Nissan">Nissan</option>
+                            <option value="Mazda">Mazda</option>
+                            <option value="Subaru">Subaru</option>
+                            <option value="Mitsubishi">Mitsubishi</option>
+                        </select>
+                    </div>
+
+                    <div class="filter-group">
+                        <label>Price Range</label>
+                        <input type="number" id="priceMin" placeholder="Min" min="0">
+                        <input type="number" id="priceMax" placeholder="Max" min="0" value="50000">
+                    </div>
+
+                    <div class="filter-group">
+                        <label>Transmission</label>
+                        <select id="transmissionFilter">
+                            <option value="">All Types</option>
+                            <option value="Automatic">Automatic</option>
+                            <option value="Manual">Manual</option>
+                        </select>
+                    </div>
+
+                    <div class="filter-group">
+                        <label>Condition</label>
+                        <select id="conditionFilter">
+                            <option value="">All Conditions</option>
+                            <option value="Excellent">Excellent</option>
+                            <option value="Good">Good</option>
+                            <option value="Fair">Fair</option>
+                        </select>
+                    </div>
+
+                    <button class="btn btn-primary" onclick="filterCars()">Apply Filters</button>
+                    <button class="btn btn-secondary" onclick="resetFilters()">Reset</button>
+                </aside>
+
+                <!-- Cars Grid -->
+                <main class="cars-main">
+                    <div id="activeSearchSummary" class="search-summary" style="display: none;"></div>
+                    <div class="cars-grid" id="carsGrid">
+                        <!-- Cars will be loaded here -->
+                    </div>
+                </main>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 ATIF TRADING LTD. All rights reserved.</p>
+            <p>Contact: <a href="mailto:atcoltd53@gmail.com">atcoltd53@gmail.com</a> | Phone: <a href="tel:+817089825090">+81-70-8982-5090</a></p>
+            <p>Social: <a href="https://www.instagram.com/atcoltd53/" target="_blank" rel="noopener noreferrer">Instagram</a> | <a href="https://x.com/atcoltd53" target="_blank" rel="noopener noreferrer">X (Twitter)</a> | <a href="https://line.me/ti/p/CQ_AwBvXuz" target="_blank" rel="noopener noreferrer">LINE</a></p>
+        </div>
+    </footer>
+
+    <script src="js/api.js?v=20260412-1"></script>
+    <script src="js/script.js?v=20260412-1"></script>
+    <script>
+        // Load all cars on page load
+        window.addEventListener('DOMContentLoaded', () => {
+            loadAllCars();
+        });
+    </script>
+</body>
+</html>

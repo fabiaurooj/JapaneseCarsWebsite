@@ -1,0 +1,12 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" width="120" height="120" viewBox="0 0 120 120" role="img" aria-label="Peugeot badge">
+  <defs>
+    <radialGradient id="g" cx="30%" cy="30%" r="75%">
+      <stop offset="0%" stop-color="#2d2319"/>
+      <stop offset="100%" stop-color="#12100d"/>
+    </radialGradient>
+  </defs>
+  <circle cx="60" cy="60" r="56" fill="url(#g)" stroke="#d4af37" stroke-width="3"/>
+  <circle cx="60" cy="60" r="47" fill="none" stroke="#f4d27a" stroke-opacity="0.35" stroke-width="1.4"/>
+  <text x="60" y="57" text-anchor="middle" fill="#f4d27a" font-size="34" font-family="Georgia, serif" font-weight="700">P</text>
+  <text x="60" y="80" text-anchor="middle" fill="#cfb16a" font-size="10" font-family="Trebuchet MS, Arial, sans-serif" letter-spacing="0.9">Peugeot</text>
+</svg>
